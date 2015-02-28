@@ -1,4 +1,4 @@
-require 'test_helper'
+frequire 'test_helper'
 
 class EstatesControllerTest < ActionController::TestCase
   setup do
@@ -18,7 +18,7 @@ class EstatesControllerTest < ActionController::TestCase
 
   test "should create estate" do
     assert_difference('Estate.count') do
-      post :create, estate: { area: @estate.area, available_date: @estate.available_date, bathroom: @estate.bathroom, floor: @estate.floor, hall: @estate.hall, kitchen: @estate.kitchen, name: @estate.name, price: @estate.price, room: @estate.room, type: @estate.type }
+      post :create, estate: { area: @estate.area, available_date: @estate.available_date, bathroom: @estate.bathroom, floor: @estate.floor, hall: @estate.hall, kitchen: @estate.kitchen, name: @estate.name, price: @estate.price, room: @estate.room, ptype: @estate.ptype }
     end
 
     assert_redirected_to estate_path(assigns(:estate))
@@ -35,7 +35,7 @@ class EstatesControllerTest < ActionController::TestCase
   end
 
   test "should update estate" do
-    patch :update, id: @estate, estate: { area: @estate.area, available_date: @estate.available_date, bathroom: @estate.bathroom, floor: @estate.floor, hall: @estate.hall, kitchen: @estate.kitchen, name: @estate.name, price: @estate.price, room: @estate.room, type: @estate.type }
+    patch :update, id: @estate, estate: { area: @estate.area, available_date: @estate.available_date, bathroom: @estate.bathroom, floor: @estate.floor, hall: @estate.hall, kitchen: @estate.kitchen, name: @estate.name, price: @estate.price, room: @estate.room, ptype: @estate.ptype }
     assert_redirected_to estate_path(assigns(:estate))
   end
 

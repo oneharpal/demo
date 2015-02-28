@@ -2,7 +2,7 @@ class CreateEstates < ActiveRecord::Migration
   def change
     create_table :estates do |t|
       t.string :name
-      t.string :type
+      t.string :ptype
       t.decimal :price
       t.integer :bathroom
       t.integer :room
